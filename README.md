@@ -1,10 +1,9 @@
 # The Resonate Wealth Game 
 ### A Bettergist Project
-#### Sponsored by PHP Experts, Inc.
 #### Bettergist: Better worlds through humanitarian code.
 
 Expand your subconscious limitations that are preventing you from accumulating
-and -- most impotantly -- *keeping* large amounts of money.
+and – most importantly – *keeping* large amounts of money.
 
 Based upon legions of psychological research, everyone has a baseline limit
 for how much money they can reasonably accumulate, and keep, over a period of
