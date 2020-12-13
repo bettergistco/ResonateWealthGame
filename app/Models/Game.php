@@ -14,6 +14,8 @@
 namespace App\Models;
 
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use PHPExperts\ConciseUuid\ConciseUuidModel;
 
 /**
@@ -24,6 +26,9 @@ use PHPExperts\ConciseUuid\ConciseUuidModel;
  * @property Carbon $last_played_at
  * @property Carbon $created_at
  * @property Carbon $updated_at
+ *
+ * @property User[]      $users
+ * @property GameRound[] $gameRounds
  **/
 class Game extends ConciseUuidModel
 {
@@ -33,4 +38,14 @@ class Game extends ConciseUuidModel
      * @var array
      */
     protected $guarded = [];
+
+    public function users(): HasMany
+    {
+        return $this->hasMany(User::class);
+    }
+
+    public function gameRounds(): HasMany
+    {
+        return $this->hasMany(GameRound::class);
+    }
 }

@@ -14,6 +14,8 @@
 namespace App\Models;
 
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 use Illuminate\Notifications\Notifiable;
 use PHPExperts\ConciseUuid\ConciseUuidAuthModel;
 
@@ -30,6 +32,8 @@ use PHPExperts\ConciseUuid\ConciseUuidAuthModel;
  * @property int    $far_goal
  * @property Carbon $created_at
  * @property Carbon $updated_at
+ *
+ * @property Game[] $games
  **/
 class User extends ConciseUuidAuthModel
 {
@@ -50,4 +54,9 @@ class User extends ConciseUuidAuthModel
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function games(): BelongsToMany
+    {
+        return $this->belongsToMany(Game::class);
+    }
 }

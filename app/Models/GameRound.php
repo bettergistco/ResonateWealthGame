@@ -14,6 +14,9 @@
 namespace App\Models;
 
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 use PHPExperts\ConciseUuid\ConciseUuidModel;
 
 /**
@@ -22,6 +25,9 @@ use PHPExperts\ConciseUuid\ConciseUuidModel;
  * @property int    $spending_goal
  * @property int    $actual_differential
  * @property Carbon $created_at
+ *
+ * @property Game      $game
+ * @property Expense[] $expense
  **/
 class GameRound extends ConciseUuidModel
 {
@@ -31,4 +37,14 @@ class GameRound extends ConciseUuidModel
      * @var array
      */
     protected $guarded = [];
+
+    public function game(): BelongsTo
+    {
+        return $this->belongsTo(Game::class);
+    }
+
+    public function expenses(): HasMany
+    {
+        return $this->hasMany(Expense::class);
+    }
 }
