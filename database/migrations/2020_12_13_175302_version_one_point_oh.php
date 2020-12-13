@@ -1,4 +1,15 @@
-<?php
+<?php declare(strict_types=1);
+
+/**
+ * This file is part of The Resonate Wealth Game, a Bettergist Collective Project.
+ *
+ * Copyright © 2020 Theodore R. Smith <hopeseekr@gmail.com>
+ *   GPG Fingerprint: D8EA 6E4D 5952 159D 7759  2BB4 EEB6 CE72 F441 EC41
+ *   https://github.com/BettergistCo/ResonateWealthGame
+ *   https://www.resonance.how/wealth-game/
+ *
+ * This file is licensed under the Creative Commons Attribution v4.0 License.
+ */
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -17,11 +28,14 @@ class VersionOnePointOh extends Migration
             $table->float('luck');
             $table->integer('peak_wealth');
             $table->integer('days_played');
+            $table->integer('days_streak');
+            $table->integer('near_goal');
+            $table->integer('far_goal');
         });
 
         Schema::create('games', function (Blueprint $table) {
             $table->string('id', 22)->primary();
-            $table->string('title');
+            $table->string('name');
             $table->integer('peak_wealth');
             $table->integer('game_days');
             $table->dateTime('last_played_at');
@@ -50,7 +64,7 @@ class VersionOnePointOh extends Migration
             $table->string('game_id', 22);
             $table->integer('spending_goal');
             $table->integer('actual_differential');
-            $table->timestamps();
+            $table->timestamp('created_at');
 
             $table->foreign('game_id')
                 ->references('id')

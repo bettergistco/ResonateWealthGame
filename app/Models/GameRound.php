@@ -14,40 +14,21 @@
 namespace App\Models;
 
 use Carbon\Carbon;
-use Illuminate\Notifications\Notifiable;
-use PHPExperts\ConciseUuid\ConciseUuidAuthModel;
+use PHPExperts\ConciseUuid\ConciseUuidModel;
 
 /**
  * @property string $id
- * @property string $name
- * @property string $email
- * @property string $password
- * @property float  $luck
- * @property int    $peak_wealth
- * @property int    $days_played
- * @property int    $days_streak
- * @property int    $near_goal
- * @property int    $far_goal
+ * @property string $game_id
+ * @property int    $spending_goal
+ * @property int    $actual_differential
  * @property Carbon $created_at
- * @property Carbon $updated_at
  **/
-class User extends ConciseUuidAuthModel
+class GameRound extends ConciseUuidModel
 {
-    use Notifiable;
-
     /**
      * The attributes that are not mass assignable.
      *
      * @var array
      */
     protected $guarded = [];
-
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
-    protected $hidden = [
-        'password', 'remember_token',
-    ];
 }
