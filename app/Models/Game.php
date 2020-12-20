@@ -14,16 +14,15 @@
 namespace App\Models;
 
 use Carbon\Carbon;
-use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use PHPExperts\ConciseUuid\ConciseUuidModel;
 
 /**
  * @property string $id
- * @property string $name
- * @property int    $peak_wealth
- * @property int    $game_days
- * @property Carbon $last_played_at
+ * @property string $name            The game's title.
+ * @property int    $peak_wealth     The max wealth achieved in the game at least 3x.
+ * @property int    $game_days       The number of make-believe days imagined.
+ * @property Carbon $last_played_at  The date at which the user last played the game.
  * @property Carbon $created_at
  * @property Carbon $updated_at
  *

@@ -25,12 +25,18 @@ class VersionOnePointOh extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->float('luck');
-            $table->integer('peak_wealth');
-            $table->integer('days_played');
-            $table->integer('days_streak');
-            $table->integer('near_goal');
-            $table->integer('far_goal');
+            $table->float('luck')->default(0);
+            $table->integer('peak_wealth')->default(0);
+            $table->integer('days_played')->default(0);
+            $table->integer('days_streak')->default(0);
+            $table->integer('live_streak')->default(0);
+            $table->integer('near_goal')->nullable();
+            $table->integer('far_goal')->nullable();
+            $table->dropColumn(['created_at', 'updated_at']);
+        });
+
+        Schema::table('users', function (Blueprint $table) {
+            $table->timestamps();
         });
 
         Schema::create('games', function (Blueprint $table) {
@@ -38,7 +44,7 @@ class VersionOnePointOh extends Migration
             $table->string('name');
             $table->integer('peak_wealth');
             $table->integer('game_days');
-            $table->dateTime('last_played_at');
+            $table->dateTime('last_played_at')->nullable();
             $table->timestamps();
         });
 

@@ -21,15 +21,16 @@ use PHPExperts\ConciseUuid\ConciseUuidAuthModel;
 
 /**
  * @property string $id
- * @property string $name
+ * @property string $name         The user's display name.
  * @property string $email
  * @property string $password
- * @property float  $luck
- * @property int    $peak_wealth
- * @property int    $days_played
- * @property int    $days_streak
- * @property int    $near_goal
- * @property int    $far_goal
+ * @property float  $luck         Luck is a continuum between -1.0 Tragic Life and +1.0 Godling
+ * @property int    $peak_wealth  The peak wealth a user has successfully reached at least 3x.
+ * @property int    $days_played  The number of days in total a user has played.
+ * @property int    $days_streak  The biggest number of consecutive days played.
+ * @property int    $live_streak  The number of days you've currently played consec
+ * @property int    $near_goal    The user's wealth horizon near-goal (progrmatically determined).
+ * @property int    $far_goal     The user's specified desired long-term wealth horizon.
  * @property Carbon $created_at
  * @property Carbon $updated_at
  *
