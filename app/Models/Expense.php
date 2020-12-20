@@ -20,8 +20,11 @@ use PHPExperts\ConciseUuid\ConciseUuidModel;
  * @property string $id
  * @property string $name
  * @property int    $cost
- * @property float  $luck_percent
- * @property bool   $global
+ * @property int    $calories      How much weight you'll pack on when you eat it.
+ * @property int    $storage       How much weight you'll have to lug around if you keep.
+ * @property float  $luck_percent  Plus or minus max range of expense's cost,
+ *                                 based on the user's internal luck factor.
+ * @property bool   $global        Whether the expense is globally usable or just for the player.
  * @property Carbon $created_at
  * @property Carbon $updated_at
  **/
