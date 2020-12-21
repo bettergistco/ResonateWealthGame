@@ -37,6 +37,21 @@ class GameRound extends ConciseUuidModel
      */
     protected $guarded = [];
 
+    public static function start(): self
+    {
+        $currentDay = GameRound::query()
+            ->where(['game_id' => $game->id])
+            ->count();
+        $spendingGoal = ($currentDay % 5) ** (int)($currentDay / 5);
+
+        $round = GameRound::query()->create([
+            'game_id'       => $game->id,
+            'spending_goal' => $spendingGoal,
+        ]);
+
+        return $round;
+    }
+
     public function game(): BelongsTo
     {
         return $this->belongsTo(Game::class);

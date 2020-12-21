@@ -63,4 +63,8 @@ $router->middleware('jwt.auth')->group(function (Router $api) {
 
     $api->post('/game',       [GameController::class, 'store']);
     $api->get('/games/{id}',  [GameController::class, 'show']);
+
+    $api->post('/games/{id}/round', [GameRoundController::class, 'store']);
+
+    $api->get('/games/{id}/history', [GameHistoryController::class, 'show']);
 });

@@ -38,6 +38,15 @@ class Game extends ConciseUuidModel
      */
     protected $guarded = [];
 
+    protected static function booted()
+    {
+        static::created(function (Game $game) {
+            GameRound::start();
+        });
+
+        parent::booted();
+    }
+
     public function users(): HasMany
     {
         return $this->hasMany(User::class);
