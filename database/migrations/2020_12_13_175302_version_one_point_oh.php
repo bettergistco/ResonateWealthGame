@@ -103,6 +103,25 @@ class VersionOnePointOh extends Migration
                 ->references('id')
                 ->on('expenses');
         });
+
+        $this->userTokens();
+    }
+
+    protected function userTokens()
+    {
+        Schema::create('user_tokens', function (Blueprint $table) {
+            $table->string('token', 32);
+            $table->string('user_id', 22);
+            $table->timestamp('created_at')->useCurrent();
+            // Constraints
+            $table->primary('token');
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
+            // Index the Foreign Keys
+            $table->index('user_id');
+        });
     }
 
     /**
@@ -118,6 +137,7 @@ class VersionOnePointOh extends Migration
             $table->dropColumn('days_played');
         });
 
+        Schema::dropIfExists('user_tokens');
         Schema::dropIfExists('rounds_expenses');
         Schema::dropIfExists('users_games');
         Schema::dropIfExists('game_rounds');
