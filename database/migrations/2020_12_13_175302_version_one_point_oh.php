@@ -83,7 +83,7 @@ class VersionOnePointOh extends Migration
             $table->string('name');
             $table->integer('cost');
             $table->integer('calories');
-            $table->integer('storage');
+            $table->integer('weight');
             $table->float('luck_percent');
             $table->boolean('global');
             $table->timestamps();

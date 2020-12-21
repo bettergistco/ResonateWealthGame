@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthenticateController;
+use App\Http\Controllers\ExpensesController;
 use App\Http\Controllers\v1\AccountController;
 use App\Http\Controllers\v1\ContactController;
 use Illuminate\Http\Request;
@@ -45,4 +46,6 @@ $router->middleware('jwt.auth')->group(function (Router $api) {
         return $request->user();
     });
 
+    $api->get('/expenses',  [ExpensesController::class, 'index']);
+    $api->post('/expenses', [ExpensesController::class, 'store']);
 });
