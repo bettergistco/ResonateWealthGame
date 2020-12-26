@@ -1,0 +1,303 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2020-12-26T05:29:04.881Z",
+  "__export_source": "insomnia.desktop.app:v2020.3.3",
+  "resources": [
+    {
+      "_id": "req_d3c9521a463d46ad870c801f73991edd",
+      "authentication": {},
+      "body": {},
+      "created": 1608515085022,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1608515085022,
+      "method": "POST",
+      "modified": 1608515288342,
+      "name": "Request Password Reset",
+      "parameters": [],
+      "parentId": "fld_8530acbf7dc04e6e97be1ebf3f6678cb",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:8000/api/auth/token/hopeseek.r@gmail.com",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_8530acbf7dc04e6e97be1ebf3f6678cb",
+      "created": 1608487430640,
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1608487430640,
+      "modified": 1608487430640,
+      "name": "Auth",
+      "parentId": "wrk_421a0cd00fc642fb95c26567431aca8c",
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_421a0cd00fc642fb95c26567431aca8c",
+      "created": 1608487403054,
+      "description": "",
+      "modified": 1608487403054,
+      "name": "ResonateWealth",
+      "parentId": null,
+      "scope": null,
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_746cd0aaa77a4164ba26918d05434919",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"hopeseek.r@gmail.com\",\n\t\"password\": \"123456!\"\n}"
+      },
+      "created": 1608487444504,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_6d5393bdcda94c8db1ebeaa4abcc28cb",
+          "name": "content-type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1608487444505,
+      "method": "POST",
+      "modified": 1608514950652,
+      "name": "Login",
+      "parameters": [],
+      "parentId": "fld_8530acbf7dc04e6e97be1ebf3f6678cb",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:8000/api/auth/login",
+      "_type": "request"
+    },
+    {
+      "_id": "req_7945ca13047749029ddcf6ba5b58133c",
+      "authentication": {},
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Theodore R. Smith\",\n\t\"email\": \"hopeseek.r@gmail.com\",\n\t\"password\": \"123456!\",\n\t\"password_confirmation\": \"123456!\"\n}"
+      },
+      "created": 1608487486129,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_6133b5d2fcb24085ab1ea1e496abe7ab",
+          "name": "content-type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1608487444455,
+      "method": "POST",
+      "modified": 1608513339967,
+      "name": "Register",
+      "parameters": [],
+      "parentId": "fld_8530acbf7dc04e6e97be1ebf3f6678cb",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:8000/api/auth/register",
+      "_type": "request"
+    },
+    {
+      "_id": "req_103e37a007a34fb28c3673de60f17fcb",
+      "authentication": {
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwODUxNjYzNywiZXhwIjozMjUwMDkyMzAzNywibmJmIjoxNjA4NTE2NjM3LCJqdGkiOiJvWkZiWk93WHBCbFh4OHVHIiwic3ViIjoiMHBFM3NCcHo1Rzl4NWJTSU1JajVlRSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.70uAfDz6awhYRR2vhkutN_YvP7nSUE_6GtgOW4iPE68",
+        "type": "bearer"
+      },
+      "body": {},
+      "created": 1608517438631,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1608487430590,
+      "method": "GET",
+      "modified": 1608517515437,
+      "name": "List Expenses",
+      "parameters": [],
+      "parentId": "wrk_421a0cd00fc642fb95c26567431aca8c",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:8000/api/expenses/",
+      "_type": "request"
+    },
+    {
+      "_id": "req_7d2e91adc1ab4f53b8f5f4fe13c21022",
+      "authentication": {
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwODUxNjYzNywiZXhwIjozMjUwMDkyMzAzNywibmJmIjoxNjA4NTE2NjM3LCJqdGkiOiJvWkZiWk93WHBCbFh4OHVHIiwic3ViIjoiMHBFM3NCcHo1Rzl4NWJTSU1JajVlRSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.70uAfDz6awhYRR2vhkutN_YvP7nSUE_6GtgOW4iPE68",
+        "type": "bearer"
+      },
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Shake\",\n\t\"cost\": 5,\n\t\"calories\": 8,\n\t\"weight\": 0,\n\t\"luck_percent\": 0.05\n}"
+      },
+      "created": 1608518014659,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_2ca138e8ffe4444fa6d17db234ccf541",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1608118912850,
+      "method": "POST",
+      "modified": 1608519157064,
+      "name": "New Expense",
+      "parameters": [],
+      "parentId": "wrk_421a0cd00fc642fb95c26567431aca8c",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:8000/api/expenses/",
+      "_type": "request"
+    },
+    {
+      "_id": "req_da5aaaf7b3184b5e992275cbd399f749",
+      "authentication": {
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwODUyMzczNSwiZXhwIjozMjUwMDkzMDEzNSwibmJmIjoxNjA4NTIzNzM1LCJqdGkiOiI2MEpZbUFxeXdTU0hyQTNNIiwic3ViIjoiNjlCcURpUjg0QVBoTVdDMzhBV0F0ZCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.43zLVT7TR6_p4ONfOP4TuNdoI7wHUM_YJZkP33a7EpE",
+        "type": "bearer"
+      },
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"name\": \"Manifestation Mansion\"\n}"
+      },
+      "created": 1608520614826,
+      "description": "",
+      "headers": [
+        {
+          "id": "pair_35f2b237fbaf4774a4e4423c087f963a",
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "isPrivate": false,
+      "metaSortKey": -1608118912825,
+      "method": "POST",
+      "modified": 1608523749009,
+      "name": "Create Game",
+      "parameters": [],
+      "parentId": "wrk_421a0cd00fc642fb95c26567431aca8c",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:8000/api/game",
+      "_type": "request"
+    },
+    {
+      "_id": "req_3694004d3d5a4480994251e6a561236e",
+      "authentication": {
+        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9hdXRoXC9sb2dpbiIsImlhdCI6MTYwODUxNjYzNywiZXhwIjozMjUwMDkyMzAzNywibmJmIjoxNjA4NTE2NjM3LCJqdGkiOiJvWkZiWk93WHBCbFh4OHVHIiwic3ViIjoiMHBFM3NCcHo1Rzl4NWJTSU1JajVlRSIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.70uAfDz6awhYRR2vhkutN_YvP7nSUE_6GtgOW4iPE68",
+        "type": "bearer"
+      },
+      "body": {},
+      "created": 1608520317038,
+      "description": "",
+      "headers": [],
+      "isPrivate": false,
+      "metaSortKey": -1608118912800,
+      "method": "GET",
+      "modified": 1608520415754,
+      "name": "Load Game",
+      "parameters": [],
+      "parentId": "wrk_421a0cd00fc642fb95c26567431aca8c",
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingFollowRedirects": "global",
+      "settingRebuildPath": true,
+      "settingSendCookies": true,
+      "settingStoreCookies": true,
+      "url": "http://localhost:8000/api/games/3EHRDxxCECcd1NETt9hZ3t",
+      "_type": "request"
+    },
+    {
+      "_id": "env_5d4bc8f7d6143da186b6fbc591c5bb75007c36b6",
+      "color": null,
+      "created": 1608487403153,
+      "data": {},
+      "dataPropertyOrder": null,
+      "isPrivate": false,
+      "metaSortKey": 1608487403153,
+      "modified": 1608487403153,
+      "name": "Base Environment",
+      "parentId": "wrk_421a0cd00fc642fb95c26567431aca8c",
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_5d4bc8f7d6143da186b6fbc591c5bb75007c36b6",
+      "cookies": [
+        {
+          "creation": "2020-12-21T02:38:07.118Z",
+          "domain": "localhost",
+          "expires": "2020-12-21T04:49:33.000Z",
+          "extensions": [
+            "samesite=lax"
+          ],
+          "hostOnly": true,
+          "id": "3244400840122681",
+          "key": "XSRF-TOKEN",
+          "lastAccessed": "2020-12-21T02:49:33.563Z",
+          "maxAge": 7200,
+          "path": "/",
+          "value": "eyJpdiI6InRTQStpb0hCbWk5dU9jelo5ZUhuMkE9PSIsInZhbHVlIjoieTJ2WVhNeEpwamJYTjRmOS91V1o5aUJEbXVpditLU29JVndLODEvcDRZVktrWlB6NE9NQzkzZ0lPck5LaHpNRXUrdDJqYVpUeElRQ3FhejJtNkJUTk1WM2p2dU8zbXltSmZ4QStXTDgyME5oZkRFcjkvVEk5UEVRMzNSY25xTlIiLCJtYWMiOiJkZjk3MmQyODA3ZjhmZWY0YTlkNGZmOTRhNzQ0YzJkMThkYjU3ZjI1YWM1MWFkMDUwMDUxNjQ2MzJkZThlOTZhIn0%3D"
+        },
+        {
+          "creation": "2020-12-21T02:38:07.120Z",
+          "domain": "localhost",
+          "expires": "2020-12-21T04:49:33.000Z",
+          "extensions": [
+            "samesite=lax"
+          ],
+          "hostOnly": true,
+          "httpOnly": true,
+          "id": "10698576582874653",
+          "key": "laravel_session",
+          "lastAccessed": "2020-12-21T02:49:33.563Z",
+          "maxAge": 7200,
+          "path": "/",
+          "value": "eyJpdiI6IlVTaWNaR1JZWHIyK2hGZFdiUFpxK0E9PSIsInZhbHVlIjoiemdOTCt6eXVpZjB2OWdtUU5yUGtsWmFjNmRHRjU1enNkNWovQTNzVGk5d3FGTjBDYjBuOW05RCt4amFObDhDTTkybi9aUnNNRUFxNzVheDhiL3N4SG1iT09FZnNLZmJiMmpKYVBMdnI5U21YLzRZMFU1ZHhYQzZVaThVT3VpM2siLCJtYWMiOiJhNGNiOGVjZDQ5ZDNlYmNkZjU4ZDk4YTVhYjE3Y2I2OWNjY2NmYzRlNzM4NDRkOTI5Y2JmYWQ2ZDM3NTM4N2QzIn0%3D"
+        }
+      ],
+      "created": 1608487403155,
+      "modified": 1608518973563,
+      "name": "Default Jar",
+      "parentId": "wrk_421a0cd00fc642fb95c26567431aca8c",
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_8c4aa5566776451d9aead36ada4b0ee4",
+      "contentType": "yaml",
+      "contents": "",
+      "created": 1608487403068,
+      "fileName": "ResonateWealth",
+      "modified": 1608487403068,
+      "parentId": "wrk_421a0cd00fc642fb95c26567431aca8c",
+      "_type": "api_spec"
+    }
+  ]
+}
